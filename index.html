@@ -52,39 +52,13 @@
   .glow-orb.one{ background:var(--neon); top:-20%; left:-10%; }
   .glow-orb.two{ background:var(--neon2); bottom:-25%; right:-15%; }
 
-  /* ---------- Road at bottom ---------- */
-  .road{
-    position:fixed;
-    bottom:0; left:0; right:0;
-    height:120px;
-    background:linear-gradient(180deg, transparent, #000);
-    z-index:1;
-    overflow:hidden;
-    border-top:2px solid rgba(0,255,178,0.35);
-  }
-  .lane{
-    position:absolute;
-    top:50%;
-    left:0;
-    width:200%;
-    height:6px;
-    transform:translateY(-50%);
-    background-image:repeating-linear-gradient(90deg, var(--neon) 0 40px, transparent 40px 80px);
-    opacity:0.55;
-    animation:roadmove 1.6s linear infinite;
-  }
-  @keyframes roadmove{
-    from{transform:translate(0,-50%);}
-    to{transform:translate(-80px,-50%);}
-  }
-
   /* ---------- Content ---------- */
   .wrap{
     position:relative;
     z-index:2;
     width:100%;
     max-width:880px;
-    padding:40px 24px 160px;
+    padding:40px 24px 60px;
     text-align:center;
     display:flex;
     flex-direction:column;
@@ -308,10 +282,6 @@
     <div class="form-msg" id="formMsg"></div>
 
     <div class="footer">© FiEV Mobility — Driving Tomorrow, Today.</div>
-  </div>
-
-  <div class="road">
-    <div class="lane"></div>
   </div>
 
 <script>
